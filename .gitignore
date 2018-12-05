@@ -41,6 +41,8 @@ build/*
 example/*
 !example/example.cpp
 !example/conf_test.cpp
+!example/log_conf.toml
+!example/log_conf2.toml
 !example/bench.cpp
 !example/utils.h
 !example/Makefile*
