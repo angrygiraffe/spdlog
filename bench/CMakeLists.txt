@@ -30,6 +30,8 @@ if(NOT TARGET spdlog)
 endif()
 
 find_package(Threads REQUIRED)
+include_directories(/usr/local/include)
+link_directories(/usr/local/lib)
 
 add_executable(bench bench.cpp)
 target_link_libraries(bench spdlog::spdlog Threads::Threads)

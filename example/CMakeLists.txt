@@ -43,7 +43,12 @@ endif()
 add_executable(multisink multisink.cpp)
 target_link_libraries(multisink spdlog::spdlog Threads::Threads)
 
+add_executable(conf-example conf_test.cpp)
+target_link_libraries(conf-example spdlog::spdlog Threads::Threads)
+
 file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/logs")
+file(COPY log_conf.toml log_conf2.toml DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 enable_testing()
 add_test(NAME example COMMAND example)
+add_test(NAME conf-example COMMAND conf-example)
